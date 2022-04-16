@@ -12,6 +12,7 @@ wheel = "^0.37.1"
 Flask = "^2.0.3"
 Flask-SQLAlchemy = "^2.5.1"
 Flask-Login = "^0.6.0"
+pyodbc = "^4.0.32"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
