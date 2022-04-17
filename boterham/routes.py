@@ -13,7 +13,7 @@ TABLE_NAME = "SNEXAMEN"
 def create_json_db(db_path, table_name):
     json_pure = subprocess.run(["mdb-json", db_path, table_name], capture_output=True, text=True)
     with open(DB_NAME_JSON, 'w') as js:
-        json.dump(json_pure, js, ensure_ascii=False, indent=4)
+        json.dump(json_pure.stdout.strip(), js, ensure_ascii=False, indent=4)
     print("DB dumped to JSON for pythonic use")
 
 @app.route("/", methods=['GET', 'POST'])
