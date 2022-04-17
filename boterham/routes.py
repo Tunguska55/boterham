@@ -24,7 +24,7 @@ def index():
         print("JSON DB variant does not exist, creating now")
         create_json_db(db_path, TABLE_NAME)
     with open(DB_NAME_JSON, 'r') as r:
-        loaded_db = json.loads(r.read())
+        loaded_db = json.load(r)
     # odbc_connection_str = 'DRIVER={MDBTools};DBQ=' + db_path +';'
     # connection = pyodbc.connect(odbc_connection_str)
     # cursor = connection.cursor()
