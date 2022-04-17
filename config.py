@@ -15,8 +15,8 @@ class Config(object):
     if SECRET_KEY is None:
         raise RuntimeError("Secret Key not setup, exiting...")
 
-    # SQLALCHEMY_DATABASE_URI = 'sqlite:///boterham_stash.db'
-    SQLALCHEMY_DATABASE_URI = "access:///?DataSource=OefenvragenCWO.mdb"
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///boterham_stash.db'
+    # SQLALCHEMY_DATABASE_URI = "access:///?DataSource=OefenvragenCWO.mdb"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Fixes issue with HTTPS redirect failures
