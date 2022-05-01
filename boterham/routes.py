@@ -10,6 +10,8 @@ import json
 DB_NAME_JSON = "OefenvragenCWO.json"
 TABLE_NAME = "SNEXAMEN"
 
+# TODO add skipped to JSON list
+
 def create_json_db(db_path, table_name):
     json_pure = subprocess.run(["mdb-json", db_path, table_name], capture_output=True, text=True)
     with open(DB_NAME_JSON, 'w') as js:
